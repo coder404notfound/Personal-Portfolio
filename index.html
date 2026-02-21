@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irfan Ahmad | Personal Portfolio</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="navbar.css">
+<link rel="stylesheet" href="footer.css">
+
+<style>
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:white;
+    line-height:1.6;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background: radial-gradient(circle at center,#1e293b,#020617);
+    padding:20px;
+}
+
+.hero h1{
+    font-size:clamp(2rem,5vw,3rem);
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:600px;
+    margin:auto;
+    opacity:0.85;
+    font-size:0.98rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    font-size:0.95rem;
+    background:#38bdf8;
+    color:black;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* Sections */
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    font-size:clamp(1.55rem,3.2vw,2rem);
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.section-title[id]{
+    scroll-margin-top:calc(var(--navbar-height,72px) + 10px);
+}
+
+.btn-row{
+    margin-top:18px;
+}
+
+.btn-row .btn + .btn{
+    margin-left:10px;
+}
+
+.contact-card{
+    max-width:500px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact-links{
+    margin-top:20px;
+}
+
+.contact-links .btn + .btn{
+    margin-left:10px;
+}
+
+.resume-section{
+    text-align:center;
+}
+
+.resume-description{
+    max-width:600px;
+    margin:0 auto;
+    opacity:0.9;
+}
+
+/* Cards */
+.grid{
+    display:grid;
+    gap:25px;
+}
+
+@media(min-width:768px){
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:16px;
+    transition:0.4s;
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.card.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card:hover{
+    box-shadow:0 0 25px rgba(56,189,248,0.4);
+}
+
+.card h3{
+    font-weight:600;
+    font-size:clamp(1.05rem,2.3vw,1.2rem);
+    margin-bottom:12px;
+    color:#38bdf8;
+}
+
+.project-main-title{
+    display:block;
+}
+
+.project-subtitle{
+    display:block;
+    margin-top:3px;
+    font-size:0.86em;
+    font-weight:500;
+    color:#93c5fd;
+}
+
+.card ul{
+    padding-left:18px;
+    opacity:0.9;
+    line-height:1.6;
+}
+
+.card p{
+    opacity:0.9;
+}
+
+/* Mobile */
+@media(max-width:600px){
+    section{
+        padding:60px 6%;
+    }
+
+    .hero{
+        padding:16px;
+    }
+
+    .hero h1{
+        font-size:1.9rem;
+    }
+
+    .hero p{
+        font-size:0.92rem;
+    }
+
+    .btn{
+        padding:10px 18px;
+        font-size:0.9rem;
+    }
+
+    .card{
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body id="top">
+
+<div id="navbar"></div>
+
+<section class="hero">
+<div>
+<h1>Hi, I'm Irfan Ahmad</h1>
+
+<p>
+Entry-level software engineer with working knowledge of Python, Flask, SQL, and core CS fundamentals.
+I enjoy building backend systems, solving problems, and learning real-world software engineering.
+</p>
+
+<a class="btn" href="#projects">View Projects</a>
+</div>
+</section>
+
+<section>
+<h2 id="education" class="section-title">Education</h2>
+
+<div class="grid">
+
+<div class="card reveal">
+<h3>MCA — Asansol Engineering College</h3>
+<p>CGPA: 8.8 | 2023 – 2025</p>
+</div>
+
+<div class="card reveal">
+<h3>BCA — Asansol Engineering College</h3>
+<p>CGPA: 8.9 | 2020 – 2023</p>
+</div>
+
+<div class="card reveal">
+<h3>Higher Secondary</h3>
+<p>Assembly Of God Church School | 68.3%</p>
+</div>
+
+<div class="card reveal">
+<h3>Matriculation</h3>
+<p>Assembly Of God Church School | 80.8%</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 id="skills" class="section-title">Skills</h2>
+
+<div class="grid">
+
+<div class="card reveal">
+<h3>Programming & Core Concepts</h3>
+<p>Python, Object Oriented Programming, Basic Data Structures & Algorithms</p>
+</div>
+
+<div class="card reveal">
+<h3>Backend & Database</h3>
+<p>Flask, SQL, MySQL, CRUD Operations</p>
+</div>
+
+<div class="card reveal">
+<h3>Frontend & Web Tools</h3>
+<p>HTML, CSS, Tailwind CSS, Basic JavaScript</p>
+</div>
+
+<div class="card reveal">
+<h3>Tools & Platforms</h3>
+<p>Git, GitHub, Postman, VS Code, Google Colab</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 id="projects" class="section-title">Projects</h2>
+
+<div class="grid">
+
+<!-- Medi Matrix -->
+<div class="card reveal">
+<h3>
+<span class="project-main-title">Medi-Matrix</span>
+<span class="project-subtitle">Disease Prediction System</span>
+</h3>
+
+<ul>
+<li>Flask web app predicting diseases from symptoms</li>
+<li>Dataset preprocessing and ML model training</li>
+<li>Frontend form connected with backend prediction engine</li>
+<li>Modular project architecture</li>
+</ul>
+
+<div class="btn-row">
+<a class="btn" href="https://github.com/coder404notfound/medi-matrix" target="_blank" rel="noopener noreferrer">
+GitHub
+</a>
+
+<a class="btn" href="medi-matrix.html">
+Project Story
+</a>
+</div>
+
+</div>
+
+<!-- Diverse Delights -->
+<div class="card reveal">
+<h3>
+<span class="project-main-title">Diverse-Delights</span>
+<span class="project-subtitle">E-Commerce Web App</span>
+</h3>
+
+<ul>
+<li>Full stack Flask e-commerce system using SQLAlchemy</li>
+<li>User authentication, cart, and order placement</li>
+<li>Razorpay payment gateway integration</li>
+<li>MVC-inspired backend structure</li>
+</ul>
+
+<div class="btn-row">
+<a class="btn" href="https://github.com/coder404notfound/diverse-delights" target="_blank" rel="noopener noreferrer">
+GitHub
+</a>
+
+<a class="btn" href="diverse-delights.html">
+Project Story
+</a>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 id="resume" class="section-title">Resume</h2>
+
+<div class="card reveal resume-section">
+<p class="resume-description">
+View my latest resume online or download the PDF.
+</p>
+
+<div class="btn-row">
+<a class="btn" href="resume/Irfan-Ahmad--Software-Engineer--Fresher--Resume.pdf" target="_blank" rel="noopener noreferrer">
+View Resume
+</a>
+<a class="btn" href="resume/Irfan-Ahmad--Software-Engineer--Fresher--Resume.pdf" download>
+Download Resume
+</a>
+</div>
+</div>
+</section>
+
+<section>
+<h2 id="contact" class="section-title">Contact</h2>
+
+<div class="card reveal contact-card">
+<p>Email: irfan.2kahmad@gmail.com</p>
+<p>Phone: +91 89186124912</p>
+<p>Location: Asansol, India</p>
+
+<div class="contact-links">
+<a class="btn" href="https://github.com/coder404notfound" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/irfan-ahmad-16072b259/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</div>
+</section>
+
+<div id="footer"></div>
+
+<script src="navbar.js"></script>
+<script src="footer.js"></script>
+<script>
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("visible");
+        } else {
+            entry.target.classList.remove("visible");
+        }
+    });
+},{
+    threshold:0.2
+});
+
+document.querySelectorAll(".reveal").forEach(el=>{
+    observer.observe(el);
+});
+</script>
+
+</body>
+</html>
+
